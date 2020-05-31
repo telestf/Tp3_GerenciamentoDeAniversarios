@@ -15,23 +15,23 @@ namespace Tp3_GerenciamentoDeAniversarios
             DataNascimento = dataNascimento;
         }
 
-        public void CalcularAniversario()
+        public string CalcularAniversario()
         {
             DateTime comemoracaoAniversario = new DateTime(DateTime.Now.Year, DataNascimento.Month, DataNascimento.Day);
             TimeSpan contagemDias = comemoracaoAniversario - DateTime.Now;
-            if(contagemDias.Days > 0)
+
+            if (contagemDias.Days > 0)
             {
-                Console.WriteLine($"Falta(m) {contagemDias.Days} dia(s) para o aniversário deste ano.");
+                return $"Falta(m) {contagemDias.Days} dia(s) para o aniversário deste ano.";
             }
             else if (contagemDias.Days == 0)
             {
-                Console.WriteLine("Hoje é o dia do aniversário.");
+                return "Hoje é o dia do aniversário.";
             }
             else
             {
-                Console.WriteLine($"O aniversário deste ano foi há {contagemDias.Days} dia(s).");
+                return $"O aniversário deste ano foi há {contagemDias.Days} dia(s).";
             }
-
         }
     }
 }
