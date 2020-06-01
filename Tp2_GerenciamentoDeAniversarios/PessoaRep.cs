@@ -45,14 +45,14 @@ namespace Tp3_GerenciamentoDeAniversarios
             var nome = Console.ReadLine();
             Console.Write("Sobrenome: ");
             var sobrenome = Console.ReadLine();
-            Console.Write("Data de Nascimento (mm/dd/yyyy): ");
+            Console.Write("Data de Nascimento (no formato mm/dd/yyyy): ");
             var dataNascimento = Console.ReadLine();
 
             if (DateTime.TryParse(dataNascimento, out DateTime parsedData))
             {
                 Console.WriteLine("\r\nDeseja adicionar essa pessoa?\r\n");
                 Console.WriteLine($"Nome Completo: {nome} {sobrenome}");
-                Console.WriteLine($"Data do Nascimento: {parsedData} \r\n");
+                Console.WriteLine($"Data do Nascimento: {parsedData:dd/mm/yyyy} \r\n");
 
                 int opcao;
 
