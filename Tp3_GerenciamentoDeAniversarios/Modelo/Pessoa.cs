@@ -30,7 +30,7 @@ namespace Tp3_GerenciamentoDeAniversarios
             }
             else
             {
-                return $"O aniversário deste ano foi há {contagemDias.Days} dia(s).";
+                return $"O aniversário deste ano foi há {Math.Abs(contagemDias.Days)} dia(s).";
             }
         }
     }
